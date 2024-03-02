@@ -1,12 +1,18 @@
-import { useState } from 'react'
+import { Hero, Navbar } from "./components";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
-    <>
-      <div>Hello, World</div>
-    </>
+    <div className='bg-primary w-full overflow-hidden'>
+      <div className="px-8">
+        <Navbar />
+      </div>
+
+      <div className="px-8">
+        <Hero />
+      </div>
+
+    </div>
   )
 }
 
