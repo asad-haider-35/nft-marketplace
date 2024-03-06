@@ -27,7 +27,7 @@ const Navbar = () => {
 
             <div>
                 <RoundedButton styles='mr-4' />
-                <Button text="Buy Now" />
+                <Button text="Buy Now" styles={'gradient text-white font-semibold'} />
             </div>
         </nav>
     )
