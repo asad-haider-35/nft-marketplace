@@ -1,11 +1,18 @@
-import React from 'react'
-import { SquidO } from '../assets'
+import React from "react";
+import { SquidO } from "../assets";
 
 const NFTCard = ({ nft }) => {
   return (
-    <div className="rounded-lg bg-transparent shadow-md overflow-hidden">
-      <div className="relative">
-        <img className="w-full h-48 object-cover rounded-t-lg" src={nft.imagePath} alt={nft.name} />
+    <div
+      className="rounded-lg shadow-md bg-primary h-96 w-96 flex flex-row justify-center items-center rounded-3xl"
+    >
+      <div  
+        className="bg-center bg-contain bg-dimBlue h-5/6 w-5/6 rounded-2xl" 
+        style={{ backgroundImage: `url(${nft.imagePath})` }}>
+        
+      </div>
+      {/* <div className="relative">
+        <img className="w-full h-full object-cover rounded-t-lg" src={nft.imagePath} alt={nft.name} />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-800/50 to-transparent"></div>
         <div className="absolute inset-x-0 bottom-0 px-6 py-4 flex justify-between items-center">
           <p className="text-white text-lg font-bold">{nft.name}</p>
@@ -28,9 +35,9 @@ const NFTCard = ({ nft }) => {
             Place Bid
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default NFTCard
+export default NFTCard;
