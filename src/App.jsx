@@ -1,4 +1,4 @@
-import { Hero, Navbar, Trending } from "./components";
+import { Artists, Hero, Navbar, Trending } from "./components";
 
 function App() {
   
@@ -14,6 +14,10 @@ function App() {
 
       <div className="px-8 flex justify-center items-center">
         <Trending />
+      </div>
+
+      <div className="px-8 flex justify-center items-center">
+        <Artists />
       </div>
 
     </div>
