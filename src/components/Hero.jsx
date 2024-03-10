@@ -19,7 +19,7 @@ const Hero = () => (
                 Digital market place for crypto collectors and non-fungible tokens (NFTs)
             </p>
 
-            <Button text="Explore More" styles={'mt-5 gradient font-semibold text-white'} />
+            <Button text="Explore More" styles={'mt-5 gradient font-semibold text-white transform -skew-x-12'} textStyles={'transform skew-x-12'} />
 
             <div className='mt-5'>
                 <Stats />

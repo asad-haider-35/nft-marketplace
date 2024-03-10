@@ -1,4 +1,15 @@
-import { ProfilePic, SquidO } from "../assets";
+import { 
+  ProfilePic, 
+  SquidO,
+  Sofia_Pic,
+  Sofia_Cover_Photo,
+  Sarah_Pic,
+  Sarah_Cover_Photo,
+  David_Pic,
+  David_Cover_Photo,
+  Javier_Pic,
+  Javier_Cover_Photo
+} from "../assets";
 
 export const navLinks = [
     {
@@ -115,5 +126,57 @@ export const nfts = [
     imagePath: '',
     remainingTimeForBid: new Date()
   },
+]
+
+export const artists = [
+  {
+    id: '1',
+    name: 'Sofia Smith',
+    followersCount: 10500,
+    isFollowed: false,
+    profilePhoto: Sofia_Pic,
+    coverPhoto: Sofia_Cover_Photo,
+  },
+  {
+    id: '2',
+    name: 'Sarah Marius',
+    followersCount: 12200,
+    isFollowed: true,
+    profilePhoto: Sarah_Pic,
+    coverPhoto: Sarah_Cover_Photo,
+  },
+  {
+    id: '3',
+    name: 'David Bose',
+    followersCount: 15700,
+    isFollowed: false,
+    profilePhoto: David_Pic,
+    coverPhoto: David_Cover_Photo,
+  },
+  {
+    id: '4',
+    name: 'Javier Bravo',
+    followersCount: 17500,
+    isFollowed: true,
+    profilePhoto: Javier_Pic,
+    coverPhoto: Javier_Cover_Photo,
+  },
+  {
+    id: '5',
+    name: 'Michael Bruce',
+    followersCount: 9500,
+    isFollowed: true,
+    profilePhoto: '',
+    coverPhoto: '',
+  },
+  {
+    id: '6',
+    name: 'Javier Bravo',
+    followersCount: 17500,
+    isFollowed: true,
+    profilePhoto: '',
+    coverPhoto: '',
+  },
+  
 ]
 

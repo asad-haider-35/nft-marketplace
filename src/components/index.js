@@ -5,6 +5,8 @@ import Hero from "./Hero";
 import Trending from "./Trending";
 import ButtonTab from "./ButtonTab";
 import NFTCard from "./NFTCard";
+import Artists from "./Artists";
+import ArtistCard from "./ArtistCard";
 
 export{
     Navbar,
@@ -13,5 +15,7 @@ export{
     Hero,
     Trending,
     ButtonTab,
-    NFTCard
+    NFTCard,
+    Artists,
+    ArtistCard,
 }

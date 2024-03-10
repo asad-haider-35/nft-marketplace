@@ -27,7 +27,7 @@ const Navbar = () => {
 
             <div>
                 <RoundedButton styles='mr-4' />
-                <Button text="Buy Now" styles={'gradient text-white font-semibold'} />
+                <Button text="Buy Now" styles={'gradient text-white font-semibold transform -skew-x-12'} textStyles={'transform skew-x-12'} />
             </div>
         </nav>
     )
