@@ -4,16 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.gradient{
-    background: linear-gradient(90deg, #5DE39F 10%, #9274FB 100%);
+.gradient {
+  background: linear-gradient(90deg, #5de39f 10%, #9274fb 100%);
 }
 
-.bg-dark-grey-custom{
-    background-color: rgba(188, 188, 188, 0.2);
+.bg-dark-grey-custom {
+  background-color: rgba(188, 188, 188, 0.2);
 }
 
 .text-gradient {
-    /* background: radial-gradient(
+  /* background: radial-gradient(
         64.18% 64.18% at 71.16% 35.69%,
         #5DE39F 10%,
         #bef3f5 17.23%,
@@ -22,25 +22,33 @@
         #5ce1e6 71.54%, 
         #9274FB 100%
     ); */
-    background: linear-gradient(90deg, #5DE39F 10%, #9274FB 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+  background: linear-gradient(90deg, #5de39f 10%, #9274fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
-.light-effect{
-    background-image: url('./assets/LightEffect.png');
+.light-effect {
+  background-image: url("./assets/LightEffect.png");
 }
 
 .bottom__shadow {
-    /* background: #E1E1E1;
+  /* background: #E1E1E1;
     filter: blur(60px); */
-    color: transparent;
-    box-shadow: 0px 4px 60px 80px rgba(225, 225, 225, 0.1)
+  color: transparent;
+  box-shadow: 0px 4px 60px 80px rgba(225, 225, 225, 0.1);
 }
 
-.inverted{
-    background: transparent;
-    border: #67F8AE solid 1px;
+.inverted {
+  background: transparent;
+  border: #67f8ae solid 1px;
+}
+
+.transform-button{
+  -webkit-transform: skew(-20deg, 0deg);
+  -moz-transform: skew(-20deg, 0deg);
+  -o-transform: skew(-20deg, 0deg);
+  -ms-transform: skew(-20deg, 0deg);
+  transform: skew(-20deg, 0deg);
 }
