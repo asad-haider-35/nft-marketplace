@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
 import ButtonTab from './ButtonTab'
 import { artists } from '../constants';
 import ArtistCard from './ArtistCard';
@@ -7,6 +8,7 @@ const Artists = () => {
 
     const [artistsPageNumber, setArtistsPageNumber] = useState(1);
     const [artistsPageSize, setArtistsPageSize] = useState(4);
+    // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const [tabs, setTabs] = useState([
         {
@@ -18,6 +20,27 @@ const Artists = () => {
             IsActive: true
         }
     ])
+
+    useEffect(() => {
+        const handleResize = () => setArtistsPageSize(getPageSizeByScreenWidth(window.innerWidth));
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup function to remove event listener on component unmount
+        return () => window.removeEventListener('resize', handleResize);
+    }, [])
+
+    function getPageSizeByScreenWidth(screenSize){
+        if(screenSize > 1700)
+            return 5;
+        else if(screenSize > 1440)
+            return 4;
+        else if(screenSize > 960)
+            return 3;
+        else if(screenSize > 740)
+            return 2;
+        else
+            return 1;
+    }
 
     function paginate(data, currentPage, pageSize) {
         // Handle invalid page numbers (less than 1)
@@ -40,7 +63,7 @@ const Artists = () => {
                 <h1 className='font-sans font-semibold ss:text-[50px] text-[25px] ss:leading-[100.8px] leading-[75px] text-gradient text-center'>Top List Artist</h1>
                 
                 <div className='w-full flex justify-center items-center'>
-                    <ButtonTab buttons={tabs} styles={'bg-dimBlue rounded py-2 w-[15%]'} />
+                    <ButtonTab buttons={tabs} styles={'bg-dimBlue rounded py-3 px-4 lg:w-[20%] xl:w-[15%] md:w-[35%] sm:w-[50%] w-full'} />
                 </div>
                 
                 <div className='mt-9 flex flex-row items-center'>

@@ -30,7 +30,7 @@ const ArtistCard = ({ artist }) => {
                 <img src={artist.coverPhoto} alt='artist' />
             </div>
             <div className='w-full grid justify-items-center'>
-                <img src={artist.profilePhoto} alt='artist' className='w-[70px] h-[70px] my-2' />
+                <div className='w-[70px] h-[70px] p-1 -mt-11 bg-dimBlue rounded-full flex justify-center items-center'><img src={artist.profilePhoto} alt='artist' className='w-[58px] h-[58px] my-2 rounded-full' /></div>
                 <p className='text-dimWhite text-[20px] my-2'>{artist.name}</p>
                 <p className='text-secondary text-[18px] my-2'><span className='font-semibold'>{getShortNumber(artist.followersCount) + ' '}</span>Followers</p>
                 <Button text={artist.isFollowed ? 'Followed' : 'Follow'} styles={artist.isFollowed ? 'inverted text-secondary w-[60%] my-2 rounded-[8px] transform -skew-x-12' : 'gradient text-white w-[60%] my-2 rounded-[8px] transform -skew-x-12'} textStyles={' transform skew-x-12'} />

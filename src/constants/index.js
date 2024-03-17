@@ -166,16 +166,16 @@ export const artists = [
     name: 'Michael Bruce',
     followersCount: 9500,
     isFollowed: true,
-    profilePhoto: '',
-    coverPhoto: '',
+    profilePhoto: Sofia_Pic,
+    coverPhoto: David_Cover_Photo,
   },
   {
     id: '6',
     name: 'Javier Bravo',
     followersCount: 17500,
     isFollowed: true,
-    profilePhoto: '',
-    coverPhoto: '',
+    profilePhoto: David_Pic,
+    coverPhoto: Sofia_Cover_Photo,
   },
   
 ]
