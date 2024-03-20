@@ -128,7 +128,7 @@ export const nfts = [
   },
 ]
 
-export const artists = [
+export let artists = [
   {
     id: '1',
     name: 'Sofia Smith',

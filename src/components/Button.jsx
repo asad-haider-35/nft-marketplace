@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Button = ({ styles, textStyles, text }) => (
-    <button className={`py-2 px-4 rounded text-[15px] font-sans ${styles}`}>
+const Button = ({ styles, textStyles, text, onClick }) => (
+    <button className={`py-2 px-4 rounded text-[15px] font-sans ${styles}`} onClick={onClick}>
         <div className={`${textStyles}`}>
             {text}
         </div>

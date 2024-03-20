@@ -7,8 +7,9 @@ import ArtistCard from './ArtistCard';
 const Artists = () => {
 
     const [artistsPageNumber, setArtistsPageNumber] = useState(1);
-    const [artistsPageSize, setArtistsPageSize] = useState(4);
-    // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [artistsPageSize, setArtistsPageSize] = useState(getPageSizeByScreenWidth(window.innerWidth));
+    // const [artists, setArtists] = useState(artistConst);
+    const [artistsTotalPages, setArtistsTotalPages] = useState(getTotalPages());
 
     const [tabs, setTabs] = useState([
         {
@@ -17,7 +18,7 @@ const Artists = () => {
         },
         {
             Text: 'Following',
-            IsActive: true
+            IsActive: false
         }
     ])
 
@@ -28,6 +29,10 @@ const Artists = () => {
         // Cleanup function to remove event listener on component unmount
         return () => window.removeEventListener('resize', handleResize);
     }, [])
+
+    useEffect(() => {
+        setArtistsTotalPages(getTotalPages());
+    }, [artistsPageSize])
 
     function getPageSizeByScreenWidth(screenSize){
         if(screenSize > 1700)
@@ -57,6 +62,14 @@ const Artists = () => {
         return paginatedData;
     }
 
+    function getTotalPages(){
+        return Array.from({ length: Math.ceil(artists.length / artistsPageSize) }, (_, i) => i + 1);
+    }
+
+    function onFollowToggle(artistIndex){
+        artists[artistIndex].isFollowed = !artists[artistIndex].isFollowed;
+    }
+
     return (
         <section className='mt-9 mb-5 w-full flex justify-center'>
             <div className='w-[90%]'>
@@ -69,9 +82,28 @@ const Artists = () => {
                 <div className='mt-9 flex flex-row items-center'>
                     {paginate(artists, artistsPageNumber, artistsPageSize).map((artist, index) => (
                         <div key={artist.id} className='flex-1 w-full flex justify-center'>
-                            <ArtistCard artist={artist} />
+                            <ArtistCard artist={artist} onFollowToggle={onFollowToggle(index)} />
                         </div>
                     ))}
+                </div>
+
+                <div className='mt-9 flex flex-row items-center'>
+                    <div className='flex-1 w-full flex justify-center'>
+                        {
+                            artistsTotalPages
+                                .map((page, index) => (
+                                    <div 
+                                        key={index} 
+                                        onClick={() => setArtistsPageNumber(page)}
+                                        className=  {`rounded-full h-[10px] cursor-pointer 
+                                                      ${index === (artistsTotalPages.length - 1) ? 'mr-0' : 'mr-2'}
+                                                      ${artistsPageNumber === page ? 'w-[20px] bg-secondary' : 'w-[10px] bg-dimWhite'}`
+                                                    }
+                                    >
+                                    </div>
+                                ))
+                        }
+                    </div>
                 </div>
             </div>
         </section>
