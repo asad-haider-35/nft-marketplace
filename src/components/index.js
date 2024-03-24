@@ -7,6 +7,7 @@ import ButtonTab from "./ButtonTab";
 import NFTCard from "./NFTCard";
 import Artists from "./Artists";
 import ArtistCard from "./ArtistCard";
+import Clients from "./Clients";
 
 export{
     Navbar,
@@ -18,4 +19,5 @@ export{
     NFTCard,
     Artists,
     ArtistCard,
+    Clients,
 }

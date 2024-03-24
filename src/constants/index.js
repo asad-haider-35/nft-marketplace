@@ -8,7 +8,15 @@ import {
   David_Pic,
   David_Cover_Photo,
   Javier_Pic,
-  Javier_Cover_Photo
+  Javier_Cover_Photo,
+  BinanceLogo,
+  NexoLogo,
+  SadapayLogo,
+  OracleLogo,
+  MetaMaskLogo,
+  DropboxLogo,
+  BscScanLogo,
+  CoinbaseLogo,
 } from "../assets";
 
 export const navLinks = [
@@ -188,3 +196,45 @@ export let artists = [
   
 ]
 
+export const clients = [
+  {
+    id: 1,
+    name: 'Binance',
+    logo: BinanceLogo
+  },
+  {
+    id: 2,
+    name: 'Nexo',
+    logo: NexoLogo
+  },
+  {
+    id: 3,
+    name: 'Sadapay',
+    logo: SadapayLogo
+  },
+  {
+    id: 4,
+    name: 'Oracle',
+    logo: OracleLogo
+  },
+  {
+    id: 5,
+    name: 'Metamask',
+    logo: MetaMaskLogo
+  },
+  {
+    id: 6,
+    name: 'Dropbox',
+    logo: DropboxLogo
+  },
+  {
+    id: 7,
+    name: 'BscScan',
+    logo: BscScanLogo
+  },
+  {
+    id: 8,
+    name: 'Coinbase',
+    logo: CoinbaseLogo
+  }
+]
