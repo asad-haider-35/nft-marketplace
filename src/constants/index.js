@@ -177,6 +177,14 @@ export let artists = [
     profilePhoto: David_Pic,
     coverPhoto: Sofia_Cover_Photo,
   },
+  {
+    id: '7',
+    name: 'Javier Bravo',
+    followersCount: 17500,
+    isFollowed: true,
+    profilePhoto: David_Pic,
+    coverPhoto: David_Cover_Photo,
+  },
   
 ]
 

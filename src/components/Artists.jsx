@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import ButtonTab from './ButtonTab'
 import { artists } from '../constants';
 import ArtistCard from './ArtistCard';
+import Button from './Button';
 
 const Artists = () => {
 
@@ -10,6 +11,7 @@ const Artists = () => {
     const [artistsPageSize, setArtistsPageSize] = useState(getPageSizeByScreenWidth(window.innerWidth));
     // const [artists, setArtists] = useState(artistConst);
     const [artistsTotalPages, setArtistsTotalPages] = useState(getTotalPages());
+    const [showFollowingOnly, setShowFollowingOnly] = useState(false)
 
     const [tabs, setTabs] = useState([
         {
@@ -22,6 +24,8 @@ const Artists = () => {
         }
     ])
 
+    const [active, setActive] = useState(tabs.filter(x => x.IsActive === true)[0].Text);
+
     useEffect(() => {
         const handleResize = () => setArtistsPageSize(getPageSizeByScreenWidth(window.innerWidth));
         window.addEventListener('resize', handleResize);
@@ -33,6 +37,10 @@ const Artists = () => {
     useEffect(() => {
         setArtistsTotalPages(getTotalPages());
     }, [artistsPageSize])
+
+    useEffect(() => {
+        setShowFollowingOnly((active === 'Following'));
+    }, [active])
 
     function getPageSizeByScreenWidth(screenSize){
         if(screenSize > 1700)
@@ -47,7 +55,7 @@ const Artists = () => {
             return 1;
     }
 
-    function paginate(data, currentPage, pageSize) {
+    function paginate(data, currentPage, pageSize, showFollowingOnly) {
         // Handle invalid page numbers (less than 1)
         if (currentPage < 1) {
           throw new Error('Current page must be a positive number');
@@ -56,9 +64,14 @@ const Artists = () => {
         // Calculate the skip index based on page number and page size
         const skip = (currentPage - 1) * pageSize;
       
+        if(showFollowingOnly){
+            // Use slice to extract the desired page of data
+            const paginatedData = data.filter(x => x.isFollowed === true).slice(skip, skip + pageSize);
+            return paginatedData;
+        }
+
         // Use slice to extract the desired page of data
         const paginatedData = data.slice(skip, skip + pageSize);
-      
         return paginatedData;
     }
 
@@ -73,17 +86,27 @@ const Artists = () => {
     return (
         <section className='mt-9 mb-5 w-full flex justify-center'>
             <div className='w-[90%]'>
-                <h1 className='font-sans font-semibold ss:text-[50px] text-[25px] ss:leading-[100.8px] leading-[75px] text-gradient text-center'>Top List Artist</h1>
-                
+                <div className="w-full flex items-center justify-center">
+                    <h1 className='font-sans font-semibold ss:text-[50px] text-[25px] ss:leading-[100.8px] leading-[75px] text-gradient text-center'>Top List Artist</h1>
+                </div>
+
                 <div className='w-full flex justify-center items-center'>
-                    <ButtonTab buttons={tabs} styles={'bg-dimBlue rounded py-3 px-4 lg:w-[20%] xl:w-[15%] md:w-[35%] sm:w-[50%] w-full'} />
+                    <ButtonTab styles={'bg-dimBlue rounded py-3 px-4 lg:w-[20%] xl:w-[15%] md:w-[35%] sm:w-[50%] w-full'}>
+                        <ul className='list-none justify-around items-center flex-1 flex'>
+                            {tabs.map((button, index) => (
+                                <li key={index}>
+                                    {button.Text === active ? 
+                                        <Button text={button.Text} styles={'gradient text-white'} textStyles={'transform skew-x-12'} onClick={() => setActive(button.Text)} /> : 
+                                        <Button text={button.Text} styles={'bg-transparent text-dimWhite'} textStyles={'transform skew-x-12'} onClick={() => setActive(button.Text)} />}
+                                </li>
+                            ))}
+                        </ul>
+                    </ButtonTab>
                 </div>
                 
-                <div className='mt-9 flex flex-row items-center'>
+                <div className='mt-9 flex flex-row items-center justify-center gap-10'>
                     {paginate(artists, artistsPageNumber, artistsPageSize).map((artist, index) => (
-                        <div key={artist.id} className='flex-1 w-full flex justify-center'>
-                            <ArtistCard artist={artist} onFollowToggle={onFollowToggle(index)} />
-                        </div>
+                        <ArtistCard key={artist.id} artist={artist} onFollowToggle={onFollowToggle(index)} />
                     ))}
                 </div>
 
