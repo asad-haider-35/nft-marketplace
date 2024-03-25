@@ -1,8 +1,10 @@
 import { useState } from "react"
 
 import { CompanyLogo, CartIcon } from "../assets"
-import { Button, RoundedButton } from '../components'
-import { navLinks } from "../constants"
+import { navLinks } from "../constants/constants";
+import RoundedButton from "./RoundedButton";
+import Button from "./Button";
+
 
 const Navbar = () => {
 

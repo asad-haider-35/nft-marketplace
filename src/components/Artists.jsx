@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 import ButtonTab from './ButtonTab'
-import { artists } from '../constants';
+import { artists } from '../constants/constants';
 import ArtistCard from './ArtistCard';
 
 const Artists = () => {
