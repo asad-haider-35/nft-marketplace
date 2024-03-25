@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react'
 
 import ButtonTab from './ButtonTab'
-import { artists } from '../constants';
 import ArtistCard from './ArtistCard';
 import Button from './Button';
+import { artists } from '../constants/constants';
 
 const Artists = () => {
 
     const [artistsPageNumber, setArtistsPageNumber] = useState(1);
     const [artistsPageSize, setArtistsPageSize] = useState(getPageSizeByScreenWidth(window.innerWidth));
-    // const [artists, setArtists] = useState(artistConst);
     const [artistsTotalPages, setArtistsTotalPages] = useState(getTotalPages());
     const [showFollowingOnly, setShowFollowingOnly] = useState(false)
 
