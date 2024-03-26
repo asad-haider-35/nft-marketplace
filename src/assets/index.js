@@ -20,6 +20,10 @@ import MetaMaskLogo from './metamask-logo.png';
 import DropboxLogo from './dropbox-logo.png';
 import BscScanLogo from './BscScan-logo.png';
 import CoinbaseLogo from './Coinbase-logo.png';
+import FacebookLogo from './Facebook_logo.svg';
+import TwitterLogo from './Twitter_logo.svg';
+import LinkedInLogo from './Linkedin_logo.svg';
+import InstagramLogo from './Instagram_logo.svg';
 
 export {
     CompanyLogo,
@@ -44,4 +48,8 @@ export {
     DropboxLogo,
     BscScanLogo,
     CoinbaseLogo,
+    FacebookLogo,
+    TwitterLogo,
+    LinkedInLogo,
+    InstagramLogo
 }
