@@ -1,5 +1,6 @@
 import React from 'react'
-import { clients } from '../constants'
+import { clients } from '../constants/constants'
+
 
 const Clients = () => {
     return (

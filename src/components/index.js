@@ -9,6 +9,7 @@ import Artists from "./Artists";
 import ArtistCard from "./ArtistCard";
 import Clients from "./Clients";
 import Footer from "./Footer";
+import MarketPlace from './MarketPlace';
 
 export{
     Navbar,
@@ -21,5 +22,6 @@ export{
     Artists,
     ArtistCard,
     Clients,
+    MarketPlace,
     Footer
 }
