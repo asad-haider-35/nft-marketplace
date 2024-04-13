@@ -1,55 +1,67 @@
-import CompanyLogo from './CompanyLogo.png';
-import CartIcon from './CartIcon.svg';
-import Wolf from './Wolf.png';
-import LightEffect from './LightEffect.png';
-import ProfilePic from './Shaz_ter_profile_pic.png'
-import SquidO from './Squido_NFT.png'
-import Sofia_Cover_Photo from './Sofia_Cover.png';
-import Sofia_Pic from './Sofia_Pic.png';
-import Sarah_Cover_Photo from './Sarah_Cover.png';
-import Sarah_Pic from './Sarah_Pic.png';
-import David_Cover_Photo from './David_Cover.png';
-import David_Pic from './David_Pic.png';
-import Javier_Cover_Photo from './Javier_Cover.png';
-import Javier_Pic from './Javier_Pic.png';
-import BinanceLogo from './Binance-Logo.png';
-import NexoLogo from './nexo-logo.png';
-import SadapayLogo from './Sadapay-logo.png';
-import OracleLogo from './Oracle-logo.png';
-import MetaMaskLogo from './metamask-logo.png';
-import DropboxLogo from './dropbox-logo.png';
-import BscScanLogo from './BscScan-logo.png';
-import CoinbaseLogo from './Coinbase-logo.png';
-import FacebookLogo from './Facebook_logo.svg';
-import TwitterLogo from './Twitter_logo.svg';
-import LinkedInLogo from './Linkedin_logo.svg';
-import InstagramLogo from './Instagram_logo.svg';
+import CompanyLogo from "./CompanyLogo.png";
+import CartIcon from "./CartIcon.svg";
+import Wolf from "./Wolf.png";
+import LightEffect from "./LightEffect.png";
+import ProfilePic from "./Shaz_ter_profile_pic.png";
+import SquidO from "./Squido_NFT.png";
+import Sofia_Cover_Photo from "./Sofia_Cover.png";
+import Sofia_Pic from "./Sofia_Pic.png";
+import Sarah_Cover_Photo from "./Sarah_Cover.png";
+import Sarah_Pic from "./Sarah_Pic.png";
+import David_Cover_Photo from "./David_Cover.png";
+import David_Pic from "./David_Pic.png";
+import Javier_Cover_Photo from "./Javier_Cover.png";
+import Javier_Pic from "./Javier_Pic.png";
+import BinanceLogo from "./Binance-Logo.png";
+import NexoLogo from "./nexo-logo.png";
+import SadapayLogo from "./Sadapay-logo.png";
+import OracleLogo from "./Oracle-logo.png";
+import MetaMaskLogo from "./metamask-logo.png";
+import DropboxLogo from "./dropbox-logo.png";
+import BscScanLogo from "./BscScan-logo.png";
+import CoinbaseLogo from "./Coinbase-logo.png";
+import FacebookLogo from "./Facebook_logo.svg";
+import TwitterLogo from "./Twitter_logo.svg";
+import LinkedInLogo from "./Linkedin_logo.svg";
+import InstagramLogo from "./Instagram_logo.svg";
+import animalnft from "./animal.png";
+import anymanft from "./Anyma_Eva-0-scaled 1.png";
+import astronft from "./astro.png";
+import catnft from "./cat.png";
+import monkeynft from "./monkey.png";
+import shapenft from "./shape.png";
 
 export {
-    CompanyLogo,
-    CartIcon,
-    Wolf,
-    LightEffect,
-    ProfilePic,
-    SquidO,
-    Sofia_Pic,
-    Sofia_Cover_Photo,
-    Sarah_Pic,
-    Sarah_Cover_Photo,
-    David_Pic,
-    David_Cover_Photo,
-    Javier_Pic,
-    Javier_Cover_Photo,
-    BinanceLogo,
-    NexoLogo,
-    SadapayLogo,
-    OracleLogo,
-    MetaMaskLogo,
-    DropboxLogo,
-    BscScanLogo,
-    CoinbaseLogo,
-    FacebookLogo,
-    TwitterLogo,
-    LinkedInLogo,
-    InstagramLogo
-}
+  CompanyLogo,
+  CartIcon,
+  Wolf,
+  LightEffect,
+  ProfilePic,
+  SquidO,
+  Sofia_Pic,
+  Sofia_Cover_Photo,
+  Sarah_Pic,
+  Sarah_Cover_Photo,
+  David_Pic,
+  David_Cover_Photo,
+  Javier_Pic,
+  Javier_Cover_Photo,
+  BinanceLogo,
+  NexoLogo,
+  SadapayLogo,
+  OracleLogo,
+  MetaMaskLogo,
+  DropboxLogo,
+  BscScanLogo,
+  CoinbaseLogo,
+  FacebookLogo,
+  TwitterLogo,
+  LinkedInLogo,
+  InstagramLogo,
+  animalnft,
+  catnft,
+  anymanft,
+  astronft,
+  monkeynft,
+  shapenft
+};

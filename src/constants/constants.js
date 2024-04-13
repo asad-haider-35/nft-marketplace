@@ -17,6 +17,12 @@ import {
   DropboxLogo,
   BscScanLogo,
   CoinbaseLogo,
+  catnft,
+  monkeynft,
+  animalnft,
+  astronft,
+  anymanft,
+  shapenft
 } from "../assets";
 
 export const navLinks = [
@@ -77,7 +83,7 @@ export const nfts = [
     name: 'SquidO',
     currentBidInETH: '41.4',
     currentBidInUSD: '$1,712,568',
-    imagePath: '',
+    imagePath: SquidO,
     remainingTimeForBid: new Date()
   },
   {
@@ -86,7 +92,7 @@ export const nfts = [
     name: 'Astro Boi',
     currentBidInETH: '23.4',
     currentBidInUSD: '$1,712,568',
-    imagePath: '',
+    imagePath: astronft,
     remainingTimeForBid: new Date()
   },
   {
@@ -95,7 +101,7 @@ export const nfts = [
     name: 'Femliene',
     currentBidInETH: '36.2',
     currentBidInUSD: '$1,712,568',
-    imagePath: '',
+    imagePath: shapenft,
     remainingTimeForBid: new Date()
   },
   {
@@ -104,7 +110,7 @@ export const nfts = [
     name: 'Vemas',
     currentBidInETH: '24.9',
     currentBidInUSD: '$1,712,568',
-    imagePath: '',
+    imagePath: catnft,
     remainingTimeForBid: new Date()
   },
   {
@@ -113,16 +119,7 @@ export const nfts = [
     name: 'Robowy',
     currentBidInETH: '51.3',
     currentBidInUSD: '$1,712,568',
-    imagePath: '',
-    remainingTimeForBid: new Date()
-  },
-  {
-    id: '2211',
-    code: '2211',
-    name: 'Miklie',
-    currentBidInETH: '17.6',
-    currentBidInUSD: '$1,712,568',
-    imagePath: '',
+    imagePath: animalnft,
     remainingTimeForBid: new Date()
   },
   {
@@ -131,7 +128,7 @@ export const nfts = [
     name: 'Champso',
     currentBidInETH: '42.5',
     currentBidInUSD: '$1,712,568',
-    imagePath: '',
+    imagePath: monkeynft,
     remainingTimeForBid: new Date()
   },
 ]
